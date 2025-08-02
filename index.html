@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SymptoLab</title>
+  <style>
+    :root {
+      --blue: #007BFF;
+      --orange: #FF7F50;
+      --white: #fff;
+      --black: #000;
+      --purple: #6a0dad;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      transition: all 0.3s;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: var(--blue);
+      color: var(--white);
+    }
+
+    header select {
+      padding: 0.5rem;
+      font-size: 1rem;
+    }
+
+    section {
+      padding: 2rem;
+      min-height: 100vh;
+      color: var(--black);
+    }
+
+    .blue-theme {
+      background: linear-gradient(to bottom right, var(--white), var(--orange));
+    }
+
+    .black-white-purple {
+      background: linear-gradient(to bottom right, var(--white), var(--purple));
+      color: var(--black);
+    }
+
+    h1, h2 {
+      color: inherit;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    img {
+      width: 100%;
+      max-width: 500px;
+      display: block;
+      margin: 1rem auto;
+    }
+
+    .features, .how-it-works, .stats, .team {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    .card {
+      background: var(--white);
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 280px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    input, textarea {
+      padding: 0.75rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    button {
+      padding: 0.75rem;
+      border: none;
+      background: var(--purple);
+      color: var(--white);
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    function switchLang(lang) {
+      document.documentElement.lang = lang;
+      document.documentElement.dir = (lang === "he") ? "rtl" : "ltr";
+      // This demo only sets the HTML lang/dir; full translation would need extra logic or libraries.
+    }
+  </script>
+</head>
+<body>
+
+<header>
+  <h1>SymptoLab</h1>
+  <select onchange="switchLang(this.value)">
+    <option value="en">English</option>
+    <option value="he">עברית</option>
+  </select>
+</header>
+
+<!-- Page 1: Title -->
+<section class="blue-theme center">
+  <h2>Data-Driven Platform for Hormonal Diseases</h2>
+  <p>An innovative data management platform for female, complex hormone-related diseases, starting with endometriosis.</p>
+  <img src="https://via.placeholder.com/500x300?text=Doctor+and+Patient" alt="Doctor and Patient">
+</section>
+
+<!-- Page 2: What SymptoLab Delivers -->
+<section class="blue-theme center">
+  <h2>What SymptoLab Delivers...</h2>
+  <div class="features">
+    <div class="card">1. Personalized Symptom Monitoring</div>
+    <div class="card">2. Personalized Disease Profile Representation</div>
+    <div class="card">3. Patterns and Correlations of Symptoms</div>
+    <div class="card">4. Scientific Evaluation of Treatment Effectiveness</div>
+    <div class="card">5. Decision Supporting Tool for Physicians</div>
+    <div class="card">6. Improved Patient-Physician Communication</div>
+  </div>
+</section>
+
+<!-- Page 3: Endometriosis Use Case -->
+<section class="blue-theme center">
+  <h2>1st Use Case: Endometriosis</h2>
+  <p>Endometriosis is a chronic, inflammatory, estrogen-dependent gynecological condition affecting about 10% of women. It is a multi-system disease that manifests as pain in various organs both within and outside the pelvic region. As a result, each patient experiences a unique and wide range of symptoms.</p>
+  <img src="https://via.placeholder.com/500x300?text=Doctor+Patient+2" alt="Doctor and Patient 2">
+</section>
+
+<!-- Page 4: Quick Stats -->
+<section class="blue-theme center">
+  <h2>Quick Stats: Endometriosis</h2>
+  <div class="stats">
+    <div class="card">📌 Affects 1 in 10 Women</div>
+    <div class="card">📊 Average of 30 Symptoms Per Patient</div>
+    <div class="card">⏳ Takes 7–12 Years to Diagnose</div>
+    <div class="card">💰 $120B Annual Economic Burden</div>
+  </div>
+</section>
+
+<!-- Page 5: How it Works -->
+<section class="blue-theme center">
+  <h2>How it Works</h2>
+  <p>SymptoLab app is in development and you can already take part in the project with our leading researcher.</p>
+  <div class="how-it-works">
+    <div class="card"><strong>1. Physician Recommendation:</strong><br>Your physician has recommended that you take part in our pilot program.</div>
+    <div class="card"><strong>2. Personalized Setup Interview:</strong><br>Schedule a 1-hour interview. We'll build your custom tracking plan.</div>
+    <div class="card"><strong>3. Daily Symptom Tracking:</strong><br>Use your custom app to track symptoms daily for at least 4 months.</div>
+    <div class="card"><strong>4. Monthly Report & Review:</strong><br>Get your profile report and meet with our team to review it.</div>
+  </div>
+</section>
+
+<!-- Page 6: Meet the Team -->
+<section class="blue-theme center">
+  <h2>Meet the Team</h2>
+  <div class="team">
+    <div class="card">
+      <img src="https://via.placeholder.com/150" alt="Ashley">
+      <p>Ashley Jones, Art Director</p>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/150" alt="Don">
+      <p>Don Francis, Tech Lead</p>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/150" alt="Alexa">
+      <p>Alexa Young, Product Manager</p>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/150" alt="Robert">
+      <p>Robert Rose, Product Designer</p>
+    </div>
+  </div>
+</section>
+
+<!-- Page 7: Get in Touch -->
+<section class="black-white-purple center">
+  <h2>Get In Touch</h2>
+  <form>
+    <input type="text" placeholder="First Name" required/>
+    <input type="text" placeholder="Last Name" required/>
+    <input type="email" placeholder="Email" required/>
+    <textarea placeholder="Your Message" rows="5" required></textarea>
+    <button type="submit">Send</button>
+  </form>
+</section>
+
+<!-- Page 8: Footer -->
+<section class="black-white-purple center">
+  <h2>SymptoLab</h2>
+  <p>Contact us: <a href="mailto:symptolabapp@gmail.com">symptolabapp@gmail.com</a></p>
+</section>
+
+</body>
+</html>
